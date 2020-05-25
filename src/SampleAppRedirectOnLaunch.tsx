@@ -10,8 +10,6 @@ import {
 import GetAccessTokenButton from "./GetAccessTokenButton";
 import GetIdTokenButton from "./GetIdTokenButton";
 
-sessionStorage.setItem("redirectEnabled", "true");
-
 // Import the authentication provider which holds the default settings
 const SampleAppRedirectOnLaunch = () => {
 

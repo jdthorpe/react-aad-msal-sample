@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-// import { app_state } from "./store/reducer"
-// import { connect } from 'react-redux'
-
 
 import "./App.css";
 import { SampleBox } from "./SampleBox";
@@ -119,33 +116,3 @@ const App = () => {
 };
 
 export default App;
-
-/*
-
-interface PROPS {
-  user?: string
-}
-
-function App(props: PROPS) {
-  return (
-    <div className="App">
-      <p>
-        {props.user ? `User Name: ${props.user}` : null}
-      </p>
-      <p>
-        {props.user ? (<div><a href={}>log out</a></div>) : (<div><a href={}>log in</a></div>)}
-      </p>
-    </div>
-  );
-}
-
-const mapStateToProps = (state: app_state): { user?: string } => {
-  return {
-    user: state.user
-  }
-}
-
-export default connect(mapStateToProps)(App);
-
-
-*/

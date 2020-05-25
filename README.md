@@ -1,3 +1,23 @@
+# demo of the `react-aad-msal` bug in chrome
+
+A stripped down version of the official [typescript sample](https://github.com/syncweek-react-aad/react-aad/tree/master/samples/react-typescript)
+for the purpose of illustrating a bug when this [react-aad](https://github.com/syncweek-react-aad/react-aad) 
+is used with the redirect option in Chrome.
+
+## usage
+
+1. set up an Azure AD app registration according two [these instructions]()
+    and be sure to enable Access Tokens and ID tokens in the Authentication
+    section.
+2. Clone this repo and update [these two lines](https://github.com/jdthorpe/react-aad-msal-sample/blob/master/src/authProvider.ts#L23-L24)
+    with the Tenant and Client for your app registration.
+3. Initialize the repo (`yarn`) and start the demo app (`yarn start`)
+4. Open the demo page in Chrome (`localhost:3000`), select the "Redirect" option and click the "Log in" button.  Log in with your credentials
+5. Open the console (`CTRL + SHIFT + J`), and then click the `Get Access Token` button.
+6. Watch the console, which will generate an error, and cause the page to refresh without acquiring the token.
+7. Click the `Get Access Token` button again and this time the access token is properly acquired.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
